@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alure Perfumería</title>
+    <!-- Vinculamos tu CSS -->
+    <link rel="stylesheet" href="perfume.css">
+</head>
+<body>
+
+    <!-- Encabezado de la tienda -->
+    <header>
+        <h1>Alure Perfumería</h1>
+        <p>Elegancia y distinción en cada fragancia</p>
+    </header>
+    <!-- Buscador Moderno -->
+<div class="buscador-container">
+    <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="input-buscador" placeholder="Buscar perfume por nombre o notas...">
+    </div>
+</div>
+    <!-- Catálogo de Perfumes Dinámico -->
+    <main>
+        <section class="catalogo">
+            <h2>Nuestras Fragancias</h2>
+            
+            <!-- Acá JavaScript inyectará las tarjetas de los perfumes -->
+            <div id="contenedor-productos" class="productos-grid"></div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Alure Perfumería. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Vinculamos el archivo JavaScript -->
+    <script src="perfume.js"></script>
+</body>
+</html>

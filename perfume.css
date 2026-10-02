@@ -1,0 +1,196 @@
+/* Reseteo básico para que se vea prolijo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales y color Azul Marino de fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b1329; /* Azul marino profundo */
+    color: #f3f4f6; /* Texto claro para que resalte */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #d4af37; /* Línea divisoria dorada */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #d4af37; /* Color Dorado */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    color: #9ca3af;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Catálogo y Contenedor de Productos */
+.catalogo {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.catalogo h2 {
+    color: #d4af37;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjeta individual de cada perfume */
+.card-perfume {
+    background-color: #111c3a; /* Un azul marino un poco más claro para las tarjetas */
+    border: 1px solid #d4af37; /* Borde dorado fino */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-perfume:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2); /* Sombra sutil dorada */
+}
+
+/* Estilo optimizado para las imágenes reales de los perfumes */
+.card-perfume img {
+    width: 100%;             /* Ocupa todo el ancho de la tarjeta */
+    height: 180px;           /* Altura fija para que todas las tarjetas sean iguales */
+    object-fit: contain;     /* Muestra la imagen entera sin recortar nada */
+    background-color: #fff;  /* Fondo blanco por si queda algún espacio libre */
+    border-radius: 8px 8px 0 0; /* Esquinas redondeadas arriba */
+    margin-bottom: 15px;
+    border: 1px solid #1f293d;
+}
+
+.card-perfume h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card-perfume .notas {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    min-height: 40px; /* Ayuda a alinear los botones si los textos varían */
+}
+
+.precio {
+    color: #d4af37;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Botón de Comprar con estilo elegante */
+.btn-comprar {
+    background-color: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #d4af37;
+    color: #0b1329; /* Se invierten los colores al pasar el mouse */
+}
+
+/* ==========================================
+   BUSCADOR MODERNO (Con dimensión fija)
+   ================================---------- */
+
+/* Contenedor general del buscador */
+.buscador-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 40px 0;
+    padding: 0 20px;
+}
+
+/* Caja del buscador con ancho fijo para que no cambie de tamaño */
+.search-box {
+    position: relative;
+    width: 450px; /* Dimensión fija que mantiene siempre el mismo tamaño */
+    background-color: #111a36; /* Tono acorde al diseño */
+    border: 2px solid #d4af37; /* Borde dorado elegante */
+    border-radius: 50px; /* Bordes redondeados tipo píldora */
+    display: flex;
+    align-items: center;
+    padding: 10px 22px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando el usuario hace clic o escribe dentro */
+.search-box:focus-within {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    transform: scale(1.01);
+}
+
+/* Ícono de la lupita */
+.search-icon {
+    font-size: 18px;
+    margin-right: 12px;
+    opacity: 0.9;
+}
+
+/* El input de texto */
+.search-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+/* El texto de placeholder */
+.search-box input::placeholder {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* Estilo para cuando no se encuentra ningún perfume */
+.no-encontrado {
+    text-align: center;
+    color: #d4af37;
+    font-size: 18px;
+    grid-column: 1 / -1;
+    padding: 40px;
+    font-style: italic;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #080d1e;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    border-top: 1px solid #1f293d;
+}
